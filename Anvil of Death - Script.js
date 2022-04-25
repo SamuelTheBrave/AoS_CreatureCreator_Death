@@ -899,7 +899,7 @@ function beastAddToWS(theNameExt, wsPartExt, theTabExt, checkIdExt) {
     && str.includes("LIEGE") === true) { actKeys = actKeys + ", LIEGE-KAVALOS" };
     addToWS(Mounted_Beast1, "description", theTabExt);
   } else {
-    if (actKeys.includes("MONSTER") === true) { actKeys = actKeys.replace(", LIEGE-KAVALOS", ""); };
+    if (actKeys.includes("LIEGE-KAVALOS") === true) { actKeys = actKeys.replace(", LIEGE-KAVALOS", ""); };
   };
   
   if (document.getElementById("gaB_01").checked == true) { 
