@@ -1762,7 +1762,9 @@ function resetRestrictionsStep6() {
 // --- scripts on step 7 ------------------------------
 // change size of warscroll
 function changeSize() {
-  document.getElementById("warscrollcard").style.display = "block";
+  document.getElementById("showhideCard").checked = true;
+  //document.getElementById("warscrollcard").style.display = "block";
+  clickCard();
   
   var format = document.getElementById("cardFormats");
   var fIndex = format.selectedIndex;
@@ -1775,8 +1777,7 @@ function changeSize() {
 
   WS = document.getElementById("yourWarscroll");
   if (V == "autosize-card") { WS.setAttribute("style", "width: " + W + "mm; height: ''"); } 
-  else { WS.setAttribute("style", "width: " + W + "mm; height: " + H + "mm;"); };   
-  document.getElementById("showhideCard").checked = true;
+  else { WS.setAttribute("style", "width: " + W + "mm; height: " + H + "mm;"); };
 };
 
 // print warscroll as png ------------------------------
@@ -2120,8 +2121,8 @@ function resetDmgTable() {
 // show/hide Warscroll ------------------------------
 function clickCard() {
   if (document.getElementById("showhideCard").checked == true) { 
-    document.getElementById("yourWarscroll").style.display = "block"
-  } else { document.getElementById("yourWarscroll").style.display = "none" }
+    document.getElementById("warscrollcard").style.display = "block"
+  } else { document.getElementById("warscrollcard").style.display = "none" }
 };
 
 //  |||||||   ||||||||  ||    ||   ||||||   ||    ||  ||||||||
